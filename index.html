@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+<body>
+    <div id="name-container">
+        <form id="name-form">
+            <p>Please Enter your name to continue</p>
+            <div>
+                <input type="text" autocomplete="off" required>
+                <input type="submit" id="name-submit" value="Perfect">
+            </div>
+        </form>
+    </div>
+    <div id="container">
+        <div id="message-body"></div>
+        <form id="message-form">
+            <input type="text" id="message-box" autocomplete="off" required>
+            <input type="submit" id="submit" value="Send">
+        </form>
+    </div>
+    <button id="logout"><i class="fas fa-power-off"></i></button>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
