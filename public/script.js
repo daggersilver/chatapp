@@ -36,7 +36,6 @@ nameForm.addEventListener("submit", (e)=>{
         appendMesg(input.value, "your-message");
 
         input.value = "";
-        messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
     });
 
     socket.on("loggedOut", (userName)=>{
@@ -57,5 +56,6 @@ nameForm.addEventListener("submit", (e)=>{
         elem.innerText = data;
         elem.className = cls;
         messageBody.appendChild(elem);
+        messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
     }
 })
