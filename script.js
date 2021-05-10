@@ -1,5 +1,5 @@
 
-const socket = io("https://chatapp99.netlify.app/");
+const socket = io("https://sodium-chats.herokuapp.com/");
 const messageBody = document.getElementById("message-body");
 const messageForm = document.getElementById("message-form");
 const input = messageForm.querySelector("input");
