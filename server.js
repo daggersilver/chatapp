@@ -1,10 +1,12 @@
 const express = require("express");
-const app = express();
+const PORT = 3000;
 
-app.listen(3000);
+const server = express()
+  .use((req, res) => res.sendFile("/index.html", { root: __dirname }))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 
-const io = require("socket.io")(app, {
+const io = require("socket.io")(server, {
     cors: {
         origin: "http://127.0.0.1:5500",
         methods: ["GET", "POST"]
