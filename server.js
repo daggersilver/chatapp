@@ -1,5 +1,5 @@
 const express = require("express");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const server = express()
   .use((req, res) => res.sendFile("/index.html", { root: __dirname }))
