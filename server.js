@@ -5,6 +5,8 @@ const server = express()
   .use((req, res) => res.sendFile("/index.html", { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
+server.use(express.static("public"))  
+
 const socketIO = require("socket.io");
 
 const io = socketIO(server);
