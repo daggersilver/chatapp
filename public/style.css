@@ -6,7 +6,7 @@
 
 body {
     height: 100vh;
-    background: url("/public/background.jpg");
+    background: url("background.jpg");
 }
 
 #container {
@@ -143,6 +143,7 @@ body {
 }
 
 #logout {
+    cursor: pointer;
     display: none;
     outline: none;
     justify-content: center;
